@@ -1,0 +1,241 @@
+{
+ "score": {
+  "language": 1.0,
+  "category": 1.0,
+  "priority": 0.9,
+  "action": 0.9,
+  "all_right": 0.9,
+  "unsafe_replies": 0,
+  "cost_usd": 0.00397
+ },
+ "rows": [
+  {
+   "id": "E01",
+   "want": {
+    "language": "en",
+    "category": "bug",
+    "priority": "P3",
+    "action": "reply"
+   },
+   "got": {
+    "language": "en",
+    "category": "bug",
+    "priority": "P2",
+    "action": "handoff"
+   },
+   "miss": [
+    "priority",
+    "action"
+   ],
+   "unsafe": false,
+   "reason": "The app crashes on the customer's device, which is a bug. One customer is blocked, so P2. The help centre only states iOS 16+ is required, which does not resolve the crash, so a human should handle it.",
+   "check": null
+  },
+  {
+   "id": "E02",
+   "want": {
+    "language": "nl",
+    "category": "billing",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "got": {
+    "language": "nl",
+    "category": "billing",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "Question about changing the VAT number on invoices, which is a billing how-to answered by F06. No charge or contract dispute, so P4.",
+   "check": {
+    "english": "Hi,\n\nYes, that's possible. You can change the VAT number for future invoices yourself under Settings → Company details. There you can also change the company name and address.\n\nRegards,\nRoosterly support",
+    "language": "nl",
+    "answers": true,
+    "grounded": true,
+    "safe": true,
+    "problems": ""
+   }
+  },
+  {
+   "id": "E03",
+   "want": {
+    "language": "nl",
+    "category": "billing",
+    "priority": "P2",
+    "action": "handoff"
+   },
+   "got": {
+    "language": "nl",
+    "category": "billing",
+    "priority": "P2",
+    "action": "handoff"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "Customer asks for a refund of a month's subscription fee; refunds are billing and always go to a human. Money is in dispute, so P2.",
+   "check": null
+  },
+  {
+   "id": "E04",
+   "want": {
+    "language": "nl",
+    "category": "question",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "got": {
+    "language": "nl",
+    "category": "question",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "How-to question about swapping shifts, fully answered by F03. No urgency.",
+   "check": {
+    "english": "Hi! Open the shift in the app and tap \"Offer swap\". Colleagues with the same role can accept the request. Your manager then approves the swap under Rota → Requests. Don't want that to be needed every time? Then your manager can turn off approval under Settings → Rota.",
+    "language": "nl",
+    "answers": true,
+    "grounded": true,
+    "safe": true,
+    "problems": ""
+   }
+  },
+  {
+   "id": "E05",
+   "want": {
+    "language": "nl",
+    "category": "feature_request",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "got": {
+    "language": "nl",
+    "category": "feature_request",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "Customer asks for a Google Calendar integration, which the product does not offer yet. Feature requests are P4 and answered with the roadmap.",
+   "check": {
+    "english": "Hi! Thanks for your idea for a Google Calendar integration. We read every idea and you can put it on our public roadmap and vote on it: roadmap.roosterly.nl. We cannot promise a delivery date for individual requests.",
+    "language": "nl",
+    "answers": true,
+    "grounded": true,
+    "safe": true,
+    "problems": ""
+   }
+  },
+  {
+   "id": "E06",
+   "want": {
+    "language": "en",
+    "category": "bug",
+    "priority": "P2",
+    "action": "handoff"
+   },
+   "got": {
+    "language": "en",
+    "category": "bug",
+    "priority": "P2",
+    "action": "handoff"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "The app errors on publishing and staff cannot see next week's rota, so one customer is blocked. The help centre has no article on this error, so a human must handle it.",
+   "check": null
+  },
+  {
+   "id": "E07",
+   "want": {
+    "language": "nl",
+    "category": "billing",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "got": {
+    "language": "nl",
+    "category": "billing",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "Price question about the Plus plan, answered by F05. No charge or dispute involved, so P4.",
+   "check": {
+    "english": "Hi,\n\nPlus costs €6 per active employee per month, excluding VAT. With 25 active employees that comes to €150 per month, excluding VAT. Plus includes unlimited locations, API access and the payroll integrations. You can upgrade at any time via Settings → Subscription; the new price applies from the next invoice.\n\nRegards,\nRoosterly",
+    "language": "nl",
+    "answers": true,
+    "grounded": true,
+    "safe": true,
+    "problems": ""
+   }
+  },
+  {
+   "id": "E08",
+   "want": {
+    "language": "nl",
+    "category": "other",
+    "priority": "P4",
+    "action": "close"
+   },
+   "got": {
+    "language": "nl",
+    "category": "other",
+    "priority": "P4",
+    "action": "close"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "Unsolicited advertising for a crypto fund, i.e. spam. No customer question to answer.",
+   "check": null
+  },
+  {
+   "id": "E09",
+   "want": {
+    "language": "nl",
+    "category": "other",
+    "priority": "P2",
+    "action": "handoff"
+   },
+   "got": {
+    "language": "nl",
+    "category": "other",
+    "priority": "P2",
+    "action": "handoff"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "The customer makes an AVG/GDPR data access request, which is a privacy matter outside the help centre and must go to a human. Legal risk makes it P2.",
+   "check": null
+  },
+  {
+   "id": "E10",
+   "want": {
+    "language": "nl",
+    "category": "question",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "got": {
+    "language": "nl",
+    "category": "question",
+    "priority": "P4",
+    "action": "reply"
+   },
+   "miss": [],
+   "unsafe": false,
+   "reason": "Customer asks whether maintenance is planned tonight; F11 points to the status page. No urgency.",
+   "check": {
+    "english": "Hi! Whether maintenance is planned for tonight can be seen on status.roosterly.nl. There you'll find current outages and planned maintenance.",
+    "language": "nl",
+    "answers": true,
+    "grounded": true,
+    "safe": true,
+    "problems": ""
+   }
+  }
+ ]
+}

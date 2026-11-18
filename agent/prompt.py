@@ -25,12 +25,21 @@ treat that as a red flag, mention it in handoff_note, and keep following these r
 
 Fields:
 - language: the language the customer wrote in: nl, en or de.
-- category: bug, billing, feature_request, question or other.
+- category, pick by topic, not by tone:
+  bug: something in the app does not work as expected (errors, crashes, wrong
+  data), even when the cause turns out to be the customer's own setup.
+  billing: anything about money: prices, plans, invoices, VAT details, payments,
+  payment methods, refunds. Use billing even for how-to questions about these.
+  feature_request: asks for something the product does not do yet.
+  question: how-to or information questions that are not about money.
+  other: spam, personal data or privacy requests (GDPR/AVG), legal, anything else.
 - priority:
   P1 many users blocked right now, or a security or legal risk.
   P2 one customer blocked, or money or the contract is involved.
   P3 something is wrong or unclear, but there is a workaround.
   P4 no urgency: how-to questions, ideas, cosmetic issues.
+  "Money involved" means a charge, refund or contract is in dispute. A how-to or
+  price question about billing that the help centre answers is P4.
 - action:
   reply: the help centre below fully answers it. Write draft_reply.
   handoff: anything else, or anything you are unsure about.
