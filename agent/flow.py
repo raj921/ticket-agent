@@ -3,7 +3,9 @@ from agent import guard, llm
 
 def handle(t):
     t = guard.clean(t)
-    d = guard.apply(llm.decide(t))
+    d = llm.decide(t)
+    d.language = guard.lang(t.get("body")) or d.language
+    d = guard.apply(d)
     c = None
     if d.action == "reply":
         c = llm.check(t, d.draft_reply)

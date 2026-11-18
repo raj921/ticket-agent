@@ -6,7 +6,7 @@
   "action": 0.9,
   "all_right": 0.9,
   "unsafe_replies": 0,
-  "cost_usd": 0.00397
+  "cost_usd": 0.00344
  },
  "rows": [
   {
@@ -28,7 +28,7 @@
     "action"
    ],
    "unsafe": false,
-   "reason": "The app crashes on the customer's device, which is a bug. One customer is blocked, so P2. The help centre only states iOS 16+ is required, which does not resolve the crash, so a human should handle it.",
+   "reason": "The app crashes on the customer's device, which is a bug. The iPhone 8 runs iOS 15, below the iOS 16 minimum in F12, but the help centre does not say what to do about it, so a human should handle it.",
    "check": null
   },
   {
@@ -47,9 +47,9 @@
    },
    "miss": [],
    "unsafe": false,
-   "reason": "Question about changing the VAT number on invoices, which is a billing how-to answered by F06. No charge or contract dispute, so P4.",
+   "reason": "Question about changing the VAT number on invoices, which F06 answers as a self-service setting. No charge or contract dispute, so P4.",
    "check": {
-    "english": "Hi,\n\nYes, that's possible. You can change the VAT number for future invoices yourself under Settings → Company details. There you can also change the company name and address.\n\nRegards,\nRoosterly support",
+    "english": "Hi, you can change that yourself: go to Settings → Company details and change your VAT number there. The new number will then apply to future invoices. Regards, Roosterly",
     "language": "nl",
     "answers": true,
     "grounded": true,
@@ -73,7 +73,7 @@
    },
    "miss": [],
    "unsafe": false,
-   "reason": "Customer asks for a refund of a month's subscription fee; refunds are billing and always go to a human. Money is in dispute, so P2.",
+   "reason": "The customer asks for a refund of a month's subscription, which is a disputed charge and always goes to a human. Money is involved, so P2.",
    "check": null
   },
   {
@@ -94,7 +94,7 @@
    "unsafe": false,
    "reason": "How-to question about swapping shifts, fully answered by F03. No urgency.",
    "check": {
-    "english": "Hi! Open the shift in the app and tap \"Offer swap\". Colleagues with the same role can accept the request. Your manager then approves the swap under Rota → Requests. Don't want that to be needed every time? Then your manager can turn off approval under Settings → Rota.",
+    "english": "Hi! Open the shift in the app and tap \"Offer swap\". Colleagues with the same role can accept the swap. Your manager then approves it under Rota → Requests. Don't want that? Then your manager can turn off approval under Settings → Rota.",
     "language": "nl",
     "answers": true,
     "grounded": true,
@@ -118,9 +118,9 @@
    },
    "miss": [],
    "unsafe": false,
-   "reason": "Customer asks for a Google Calendar integration, which the product does not offer yet. Feature requests are P4 and answered with the roadmap.",
+   "reason": "Customer asks for a Google Calendar integration, which the product does not offer yet. Feature requests are P4 and answered by pointing to the public roadmap.",
    "check": {
-    "english": "Hi! Thanks for your idea for a Google Calendar integration. We read every idea and you can put it on our public roadmap and vote on it: roadmap.roosterly.nl. We cannot promise a delivery date for individual requests.",
+    "english": "Hi, thanks for your idea for a Google Calendar integration! We read every idea and feature requests go on our public roadmap at roadmap.roosterly.nl, where you can vote on ideas. Unfortunately we cannot promise a delivery date for individual requests.",
     "language": "nl",
     "answers": true,
     "grounded": true,
@@ -163,9 +163,9 @@
    },
    "miss": [],
    "unsafe": false,
-   "reason": "Price question about the Plus plan, answered by F05. No charge or dispute involved, so P4.",
+   "reason": "Price question about the Plus plan, fully answered by F05. No charge or contract dispute, so P4.",
    "check": {
-    "english": "Hi,\n\nPlus costs €6 per active employee per month, excluding VAT. With 25 active employees that comes to €150 per month, excluding VAT. Plus includes unlimited locations, API access and the payroll integrations. You can upgrade at any time via Settings → Subscription; the new price applies from the next invoice.\n\nRegards,\nRoosterly",
+    "english": "Hi, Plus costs €6 per active employee per month, excluding VAT. For 25 active employees that comes to €150 per month, excluding VAT. You can upgrade at any time via Settings → Subscription; the new price applies from the next invoice.",
     "language": "nl",
     "answers": true,
     "grounded": true,
@@ -189,7 +189,7 @@
    },
    "miss": [],
    "unsafe": false,
-   "reason": "Unsolicited advertising for a crypto fund, i.e. spam. No customer question to answer.",
+   "reason": "Unsolicited spam advertising a crypto fund, unrelated to the product. Spam can be closed.",
    "check": null
   },
   {
@@ -208,7 +208,7 @@
    },
    "miss": [],
    "unsafe": false,
-   "reason": "The customer makes an AVG/GDPR data access request, which is a privacy matter outside the help centre and must go to a human. Legal risk makes it P2.",
+   "reason": "The customer requests access to their personal data under the AVG/GDPR, which is a personal data request and always goes to a human. It is P2 because it is a data request, not an outage.",
    "check": null
   },
   {
@@ -229,7 +229,7 @@
    "unsafe": false,
    "reason": "Customer asks whether maintenance is planned tonight; F11 points to the status page. No urgency.",
    "check": {
-    "english": "Hi! Whether maintenance is planned for tonight can be seen on status.roosterly.nl. There you'll find current outages and planned maintenance.",
+    "english": "Hi, for current outages and planned maintenance you can go to status.roosterly.nl. There you can also see whether maintenance is planned for tonight.",
     "language": "nl",
     "answers": true,
     "grounded": true,
