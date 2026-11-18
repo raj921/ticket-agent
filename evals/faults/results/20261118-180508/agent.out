@@ -1,0 +1,13 @@
+U01 handoff P2 sent
+U02 handoff P2 sent
+U03 handoff P2 sent (response lost, confirmed by re-read)
+U04 handoff P1 sent
+U05 handoff P2 sent
+U06 reply P4 sent
+U07 reply P4 sent
+U08 reply P4 sent
+U09 reply P4 sent
+U10 reply P4 sent
+U11 close P4 sent
+U12 handoff P1 sent
+{'reply': 5, 'close': 1, 'handoff': 1} cost $0.0026 log logs/run-20261118-180450.jsonl

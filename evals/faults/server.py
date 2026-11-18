@@ -101,13 +101,14 @@ class Desk(BaseHTTPRequestHandler):
                 ids = [i for i in ids if i > cursor]
             page = ids[:limit]
             nxt = page[-1] if len(ids) > limit else None
-            return self.reply(200, {"tickets": [{**tickets[i], "handled": handled.get(i)} for i in page], "next_cursor": nxt})
+            return self.reply(200, {"tickets": [{**tickets[i], "handled": (handled.get(i) or {}).get("action")} for i in page], "next_cursor": nxt})
         if parts[0] == "tickets" and len(parts) == 2:
             if self.gate(None):
                 return
             if parts[1] not in tickets:
                 return self.reply(404, {"error": "not_found"})
-            return self.reply(200, {**tickets[parts[1]], "handled": handled.get(parts[1])})
+            h = handled.get(parts[1])
+            return self.reply(200, {**tickets[parts[1]], "handled": h and {"at": h["at"], "action": h["action"]}})
         return self.reply(404, {"error": "not_found"})
 
     def do_POST(self):

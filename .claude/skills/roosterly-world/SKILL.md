@@ -29,7 +29,7 @@ Read `eval-engineering` first. This file holds only what is specific to this pro
   - **422:** carries `problems`.
 - **Tickets:**
   - `GET /tickets?limit<=10&status=open|all&cursor=<id>` pages with `next_cursor`.
-  - `GET /tickets/{id}` returns `handled`, which is `null` or the stored decision.
+  - `handled` is `null` when open. In the list it is the action word (`"reply"`). On `GET /tickets/{id}` it is `{"at", "action"}`. The live API never returns the stored note or draft, so keep the full decision in the agent's own log or a fake server's `/_state`.
 - **Decisions:** `POST /tickets/{id}/reply|handoff|close`.
   - Always required: language, category, priority, reason.
   - A reply also needs `draft_reply`. A handoff also needs `handoff_note`.
