@@ -86,7 +86,7 @@ def send(id, action, body):
             return call("POST", f"/tickets/{id}/{action}", body)
         except httpx.TransportError:
             if ticket(id).get("handled"):
-                raise Handled(id)
+                return {"ok": True, "recovered": True}
             time.sleep(0.5 * 2**n)
     raise ApiError(f"POST {id}/{action} -> network kept failing")
 

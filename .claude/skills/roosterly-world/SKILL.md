@@ -77,5 +77,5 @@ Read `eval-engineering` first. This file holds only what is specific to this pro
 
 ## Known gaps
 
-- `agent/run.py` logs "skipped: 409 already handled" when its own POST was saved but the response was lost. The log text is wrong; no second answer is sent.
+- A lost POST response used to be logged as "skipped: 409 already handled". This is fixed: it now logs "sent (response lost, confirmed by re-read)". Any future lost-response Task should check for that exact log result.
 - No Task yet covers a follow-up in a ticket thread (T013-like), a mixed-language ticket, or a 422 caused by the model emitting a value outside the allowed enum.

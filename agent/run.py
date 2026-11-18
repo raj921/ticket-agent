@@ -42,8 +42,8 @@ def one(t):
         line["result"] = "skipped: already handled"
     else:
         try:
-            api.send(t["id"], d.action, guard.body(d))
-            line["result"] = "sent"
+            r = api.send(t["id"], d.action, guard.body(d))
+            line["result"] = "sent (response lost, confirmed by re-read)" if r.get("recovered") else "sent"
         except api.Handled:
             line["result"] = "skipped: 409 already handled"
     line["ms"] = int((time.monotonic() - start) * 1000)

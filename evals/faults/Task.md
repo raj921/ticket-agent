@@ -86,4 +86,4 @@ Evidence comes from the server's saved state (`/_state`) and its request log. It
 
 - **Human:** approve the labels. U04's category (`other` vs `bug`) is debatable; the agent said `bug`.
 - **Run plan:** `deepseek-flash`, 2 trials, no judge, a 600 s timeout, about $0.003 per trial.
-- **Known agent finding:** after the dropped response on U03, the agent logs "skipped: 409 already handled", but the agent's own POST was saved and no 409 happened. The decision is correct; only the log text is wrong.
+- **Agent finding, fixed:** in the first two trials, the dropped response on U03 was logged as "skipped: 409 already handled", although the agent's own POST had been saved and no 409 happened. `api.send` now reports a recovered send, and the log reads "sent (response lost, confirmed by re-read)". Decisions were never affected.
